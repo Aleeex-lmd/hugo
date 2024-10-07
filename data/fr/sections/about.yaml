@@ -1,0 +1,7 @@
+section:
+  name: Sobre mi # Título de la sección (predeterminado: "")
+  id: about # id del url de la sección *se requiere*
+  enable: true # Booleano que determina si la sección está activada (predeterminado: false)
+  weight: 1 # Orden de la sección (predeterminado: alfabeticamente seguida del peso)
+  showOnNavbar: true # Booleano que determina si el enlace de esta sección debe aparecer en la barra de navegación
+  template: sections/about.html # Permite apuntar a una plantilla específica

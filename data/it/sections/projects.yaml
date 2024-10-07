@@ -1,0 +1,18 @@
+section:
+  name: Proyectos # Título de la sección (predeterminado: "")
+  id: projects # id del url de la sección *se requiere*
+  enable: true # Booleano que determina si la sección está activada (predeterminado: false)
+  weight: 5 # Orden de la sección (predeterminado: alfabeticamente seguida del peso)
+  showOnNavbar: true # Booleano que determina si el enlace de esta sección debe aparecer en la barra de navegación
+  # Opcionalmente puede ocultar el título del menú
+  # hideTitle: true
+
+buttons:
+- name: Todos
+  filter: "all"
+- name: Professional
+  filter: "professional"
+- name: Académico
+  filter: "academic"
+- name: Hobby
+  filter: "hobby"

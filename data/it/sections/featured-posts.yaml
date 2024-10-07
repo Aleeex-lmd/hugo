@@ -1,0 +1,14 @@
+# Información de la sección
+section:
+  name: Publicaciones Destacadas # Título de la sección
+  id: featured-posts # id del url de la sección *se requiere*
+  enable: true # Booleano que determina si la sección está activada (predeterminado: false)
+  weight: 6 # Orden de la sección (predeterminado: alfabeticamente seguida del peso)
+  showOnNavbar: true # Booleano que determina si el enlace de esta sección debe aparecer en la barra de navegación
+  hideTitle: true # Opcionalmente puede ocultar el título del menú (predeterminado: false)
+
+# publicaciones a destacar
+posts:
+  - quickstart
+  - update-v3-to-v4
+  - prepare-site

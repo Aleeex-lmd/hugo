@@ -1,0 +1,8 @@
+section:
+  name: Logros # Título de la sección (predeterminado: "")
+  id: achievements # id del url de la sección *se requiere*
+  enable: true # Booleano que determina si la sección está activada (predeterminado: false)
+  weight: 9 # Orden de la sección (predeterminado: alfabeticamente seguida del peso)
+  showOnNavbar: true # Booleano que determina si el enlace de esta sección debe aparecer en la barra de navegación
+  # Opcionalmente puede ocultar el título del menú
+  # hideTitle: true
