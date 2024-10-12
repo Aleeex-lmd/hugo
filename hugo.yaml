@@ -66,12 +66,12 @@ params:
   # GitHub repo URL of your site
   gitRepo: https://github.com/Aleeex-lmd/hugo-toha.github.io
 
-  background: "images/default-background.jpg"
+  background: images/default-background.jpg
 
   logo:
     main: images/main-logo.png
-    inverted: images/main-logo.png
-    favicon: images/favicon.png
+    inverted: images/inverted-logo.png
+    favicon: images/favicon.jpg
 
   features:
     theme:
