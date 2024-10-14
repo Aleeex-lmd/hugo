@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on NotKod</title>
+    <link>https://hugo-toha.github.io/en/posts/</link>
+    <description>Recent content in Posts on NotKod</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 14 Oct 2024 10:00:00 +0000</lastBuildDate><atom:link href="https://hugo-toha.github.io/en/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>Prueba: Introducción a la implantación de aplicaciones web</title>
+      <link>https://hugo-toha.github.io/en/posts/prueba/prueba/</link>
+      <pubDate>Mon, 14 Oct 2024 10:00:00 +0000</pubDate>
+      
+      <guid>https://hugo-toha.github.io/en/posts/prueba/prueba/</guid>
+      <description>&lt;p&gt;Alejandro Sánchez Gómez&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Imagen&#34; src=&#34;https://hugo-toha.github.io/images/banner.jpg&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+    
+  </channel>
+</rss>

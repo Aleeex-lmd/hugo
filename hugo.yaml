@@ -2,7 +2,6 @@ baseURL: https://hugo-toha.github.io
 
 languageCode: en-us
 title: "NotKod"
-
 # Use Hugo modules to add theme
 
 module:
@@ -68,6 +67,10 @@ params:
 
   background: images/default-background.jpg
 
+  author:
+     greeting: "Notkod"
+     image: "/images/author.png"  # Asegúrate de que esta imagen exista en tu carpeta 'static/images/'
+
   logo:
     main: images/main-logo.png
     inverted: images/inverted-logo.png
@@ -87,6 +90,7 @@ params:
     # Enable blog posts
     blog:
       enable: true
+      showAuthor: true
 
     # Enable Table of contents in reading page
     toc:
