@@ -33,7 +33,7 @@ This implementation uses Fusejs and mark.js
 Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [“HTML”, “JSON”] ```">
   <meta property="og:locale" content="it">
   <meta property="og:type" content="article">
-    <meta property="article:section" content="search">
+    <meta property="article:section" content="notes">
     <meta property="article:published_time" content="2010-06-08T08:06:25+06:00">
     <meta property="article:modified_time" content="2010-06-08T08:06:25+06:00">
 
@@ -67,7 +67,7 @@ Initial setup Search depends on additional output content type of JSON in config
     </script>
   </head>
 
-  <body class="type-search kind-page" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-offset="80">
+  <body class="type-notes kind-page" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-offset="80">
     <div class="container-fluid bg-secondary wrapper">
       
       
@@ -386,7 +386,7 @@ Initial setup Search depends on additional output content type of JSON in config
         </form>
         <div class="sidebar-tree">
           <ul class="tree" id="tree">
-            <li id="list-heading"><a href="/it/search" data-filter="all">Ricerca</a></li>
+            <li id="list-heading"><a href="/it/notes" data-filter="all">Appunti</a></li>
             <div class="subtree">
                 
 
@@ -400,38 +400,43 @@ Initial setup Search depends on additional output content type of JSON in config
 
       
       
-<script>
-  document.body.classList.replace('kind-page', 'kind-section');
-</script>
 <section class="content-section" id="content-section">
   <div class="content container-fluid" id="content">
-    <div class="container-fluid post-card-holder" id="post-card-holder">
-      <div id="search-results" style="display: flex; flex-wrap: wrap;">
+    <div class="container-fluid note-card-holder" id="note-card-holder">
+      <p>This file exists solely to respond to /search URL with the related <code>search</code> layout template.</p>
+<p>No content shown here is rendered, all content is based in the template layouts/page/search.html</p>
+<p>Setting a very low sitemap priority will tell search engines this is not important content.</p>
+<p>This implementation uses Fusejs and mark.js</p>
+<h2 id="initial-setup">Initial setup</h2>
+<p>Search  depends on additional output content type of JSON in config.toml
+```
+[outputs]
+home = [&ldquo;HTML&rdquo;, &ldquo;JSON&rdquo;]
+```</p>
+<h2 id="searching-additional-fields">Searching additional fields</h2>
+<p>To search additional fields defined in front matter, you must add it in 2 places.</p>
+<h3 id="edit-layouts_defaultindexjson">Edit layouts/_default/index.JSON</h3>
+<p>This exposes the values in /index.json
+i.e. add <code>category</code>
+```
+&hellip;
+&ldquo;contents&rdquo;:{{ .Content | plainify | jsonify }}
+{{ if .Params.tags }},
+&ldquo;tags&rdquo;:{{ .Params.tags | jsonify }}{{end}},
+&ldquo;categories&rdquo; : {{ .Params.categories | jsonify }},
+&hellip;
+```</p>
+<h3 id="edit-fusejs-options-to-search">Edit fuse.js options to Search</h3>
+<p><code>assets/scripts/pages/search.js</code>
+```
+keys: [
+&ldquo;title&rdquo;,
+&ldquo;contents&rdquo;,
+&ldquo;tags&rdquo;,
+&ldquo;categories&rdquo;
+]
+```</p>
 
-        <script id="search-result-template" type="text/x-js-template">
-          <div class="post-card">
-              <div class="card">
-                <div class="card-head">
-                  <a href="${link}" class="post-card-link">
-                  <img class="card-img-top" src="${hero}" alt="Card Heading Image">
-                  </a>
-                </div>
-                <div class="card-body">
-                  <a href="${link}" class="post-card-link">
-                    <h5 class="card-title">${title}</h5>
-                    <p class="card-text post-summary">${summary}</p>
-                  </a>
-                  
-                </div>
-                <div class="card-footer">
-                  <span class="float-start">${date}</span>
-                  <a href="${link}" class="float-end btn btn-outline-info btn-sm">Read</a>
-                </div>
-              </div>
-          </div>
-        </script>
-
-      </div>
     </div>
   </div>
 </section>
@@ -548,7 +553,7 @@ Initial setup Search depends on additional output content type of JSON in config
                   
                 
                 <li class="nav-item">
-                  <a class="smooth-scroll" href="https://hugo-toha.github.io/it/#recent-posts">Publicaciones Recientes</a>
+                  <a class="smooth-scroll" href="https://hugo-toha.github.io/it/#featured-posts">Publicaciones Destacadas</a>
                 </li>
               
               
@@ -557,7 +562,7 @@ Initial setup Search depends on additional output content type of JSON in config
                   
                 
                 <li class="nav-item">
-                  <a class="smooth-scroll" href="https://hugo-toha.github.io/it/#featured-posts">Publicaciones Destacadas</a>
+                  <a class="smooth-scroll" href="https://hugo-toha.github.io/it/#recent-posts">Publicaciones Recientes</a>
                 </li>
               
               
