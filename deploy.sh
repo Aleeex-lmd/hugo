@@ -19,7 +19,6 @@ hugo
 
 # 3. Realizar commit y push del repositorio de Hugo (desarrollo)
 echo "Agregando cambios al repositorio de Hugo..."
-git rm *
 git add *
 
 echo "Realizando commit en el repositorio de Hugo..."
@@ -34,7 +33,6 @@ cd "$REPO_PUBLIC" || { echo "No se pudo navegar al repositorio de Netlify"; exit
 
 # 5. Copiar y reemplazar el contenido de 'public' del repositorio de Hugo al repositorio de Netlify
 echo "Reemplazando el contenido del repositorio de Netlify con el de 'public'..."
-git rm *
 rm -rf *  # Eliminar todo el contenido existente en el repositorio de Netlify
 cp -r "$PUBLIC_DIR/"* .  # Copiar el contenido de 'public' al repositorio de Netlify
 
