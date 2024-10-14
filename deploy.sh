@@ -13,12 +13,14 @@ echo "Navegando al repositorio de Hugo..."
 cd "$REPO_HUGO" || { echo "No se pudo navegar al repositorio de Hugo"; exit 1; }
 
 # 2. Generar el sitio con Hugo
+rm -rf "$PUBLIC_DIR"
 echo "Generando el sitio..."
 hugo
 
 # 3. Realizar commit y push del repositorio de Hugo (desarrollo)
 echo "Agregando cambios al repositorio de Hugo..."
-git add .
+git rm *
+git add *
 
 echo "Realizando commit en el repositorio de Hugo..."
 git commit -m "$COMMIT_MSG"
@@ -38,7 +40,7 @@ cp -r "$PUBLIC_DIR/"* .  # Copiar el contenido de 'public' al repositorio de Net
 
 # 6. Agregar los cambios al repositorio de Netlify
 echo "Agregando cambios al repositorio de Netlify..."
-git add .
+git add *
 
 # 7. Hacer commit de los cambios en el repositorio de Netlify
 echo "Realizando commit en el repositorio de Netlify..."
@@ -46,7 +48,7 @@ git commit -m "$COMMIT_MSG"
 
 # 8. Subir los cambios a GitHub en el repositorio de Netlify
 echo "Subiendo cambios al repositorio de Netlify..."
-git push origin "$BRANCH_PUBLIC"
+git push 
 
 # Confirmación final
 echo "Despliegue completado: cambios subidos a ambos repositorios y Netlify ha sido notificado."
