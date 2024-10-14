@@ -15,6 +15,6 @@ menu:
         parent: "prueba"
 ---
 
-Alejandro Sánchez Gómez prueba
+Alejandro Sánchez Gómez 
 
 ![Imagen](/images/banner.jpg)
